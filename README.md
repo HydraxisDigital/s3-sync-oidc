@@ -12,6 +12,7 @@ This is a rework of Jake Jarvis's [s3-sync-action](https://github.com/jakejarvis
   env:
     AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
     AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
+    AWS_REGION: eu-west-2
 ```
 
 ## Environment Variables
