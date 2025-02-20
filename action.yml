@@ -1,0 +1,9 @@
+name: "S3 Sync with OIDC"
+description: "Sync repository to AWS S3 bucket using OIDC authentication"
+author: TheBigSniz
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: refresh-cw
+  color: blue
