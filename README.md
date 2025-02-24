@@ -6,7 +6,7 @@ This is a rework of Jake Jarvis's [s3-sync-action](https://github.com/jakejarvis
 
 ```yaml
 - name: Sync to S3
-  uses: TheBigSniz/s3-sync-oidc@master
+  uses: TheBigSniz/s3-sync-oidc@main
   with:
     args: --follow-symlinks --delete --exclude ".git/*"
   env:
@@ -23,5 +23,5 @@ This is a rework of Jake Jarvis's [s3-sync-action](https://github.com/jakejarvis
 
 ## args
 
-All [aws s3 sync](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html) flags are supported.
+All [aws s3 sync](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html) flags are supported. 
 
