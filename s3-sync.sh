@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-# Get the OIDC token from GitHub's token endpoint
-TOKEN=$(curl -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r '.value')
+# Get the OIDC token from GitHub's token endpoint with the correct audience
+TOKEN=$(curl -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" | jq -r '.value')
 
 export AWS_WEB_IDENTITY_TOKEN_FILE="/tmp/awstoken"
 echo "$TOKEN" > "$AWS_WEB_IDENTITY_TOKEN_FILE"
