@@ -7,8 +7,6 @@ LABEL "com.github.actions.color"="blue"
 
 LABEL version="0.1.0"
 LABEL repository="https://github.com/TheBigSniz/s3-sync-oidc"
-LABEL homepage="https://sr4n.com/"
-LABEL maintainer="Sam Nisbet <sam@sr4n.com>"
 
 RUN yum install -y jq
 ADD s3-sync.sh /s3-sync.sh
