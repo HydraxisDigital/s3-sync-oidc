@@ -10,7 +10,7 @@ LABEL repository="https://github.com/TheBigSniz/s3-sync-oidc"
 LABEL homepage="https://sr4n.com/"
 LABEL maintainer="Sam Nisbet <sam@sr4n.com>"
 
-RUN yum install -y curl jq
+RUN yum install -y jq
 ADD s3-sync.sh /s3-sync.sh
 RUN chmod +x /s3-sync.sh
 ENTRYPOINT ["/s3-sync.sh"]
